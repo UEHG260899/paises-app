@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col">
-        <form (ngSubmit)="buscar(termino)" autocomplete="off">
+        <form (ngSubmit)="buscar()" autocomplete="off">
             <input type="text" name="termino" placeholder="Buscar Pais" class="form-control" [(ngModel)]="termino">
         </form>
     </div>
@@ -11,11 +11,11 @@
 
 <hr>
 
-<div class="alert alert-danger">
-    No se encontró nada con el termino de busqueda 123
+<div class="alert alert-danger" *ngIf="hayError">
+    No se encontró nada con el termino de busqueda {{ termino }}
 </div>
 
-<div class="row">
+<div *ngIf="!hayError" class="row">
     <div class="col">
         <table class="table table-hover">
             <thead>
