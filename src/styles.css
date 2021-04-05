@@ -3,3 +3,23 @@
 .small-flag {
     width: 50px;
 }
+
+.contenedor{
+    margin-left: 20%;
+    border-radius: 3%;
+    width: 600px;
+    height: 30.5vh;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+.container-body{
+    padding: 30px;
+}
+
+#tituloInfo {
+    text-align: center;
+}
+
+.fila {
+    margin-top: 50px;
+}
