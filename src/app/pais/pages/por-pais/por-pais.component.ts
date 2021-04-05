@@ -21,13 +21,17 @@ export class PorPaisComponent {
   buscar(termino: string){
     this.hayError = false;
     this.termino = termino;
-    this.paisService.bucsarPais(this.termino)
+    this.paisService.buscarPais(this.termino)
         .subscribe((paises) => {
           this.paises = paises;
         }, (err) => {
           this.hayError = true;
           this.paises = [];
         });
+  }
+
+  sugerencias(termino: string){
+    this.hayError = false;
   }
 
 

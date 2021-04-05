@@ -13,11 +13,16 @@ export class PaisService {
 
   constructor(private http: HttpClient) { }
 
-  bucsarPais(termino: string): Observable<Country[]>{
+  buscarPais(termino: string): Observable<Country[]>{
     const url = `${this._apiURL}/name/${termino}`;
     return this.http.get<Country[]>(url);
     /*.pipe(
       catchError(err => of([]))
     )*/
+  }
+
+  buscarCapital(termino: string): Observable<Country[]>{
+    const url= `${this._apiURL}/capital/${termino}`;
+    return this.http.get<Country[]>(url);
   }
 }
